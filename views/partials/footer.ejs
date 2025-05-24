@@ -1,0 +1,29 @@
+<div class="bg-yellow-100 py-8 text-center">
+  <p class="text-yellow-800 mb-2 font-semibold">Ikuti kami di media sosial!</p>
+  <a href="https://whatsapp.com/channel/0029VaalShkGZNCsXgFPO80A" class="text-yellow-800 hover:text-yellow-600 mx-4" aria-label="WhatsApp RotiDeluxe"><i class="fab fa-whatsapp fa-2x"></i></a>
+  <a href="https://www.instagram.com/randomshare07?igsh=MTd6aXVsNjFrOHNlaA==" class="text-yellow-800 hover:text-yellow-600 mx-4" aria-label="Instagram RotiDeluxe"><i class="fab fa-instagram fa-2x"></i></a>
+</div>
+
+<footer class="bg-yellow-800 text-white text-center py-6">
+  <p>&copy; <%= new Date().getFullYear() %> <%= infoToko.namaToko %></p>
+  <p class="text-sm opacity-75"><%= infoToko.alamat %> | Telp: <%= infoToko.telepon %></p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inisialisasi AOS
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+
+  // Logika untuk menghilangkan preloader 
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      setTimeout(() => {
+        preloader.classList.add("hidden"); // Tambahkan kelas .hidden untuk memicu transisi CSS
+      }, 500); // Delay awal sebelum memulai transisi fade-out (bisa disesuaikan)
+    }
+  });
+</script>
